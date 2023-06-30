@@ -62,3 +62,9 @@ def poblar_bd(request):
     Vehiculo.objects.create(patente="TIRO98", marca='Mercedes-Benz', modelo="Iron Bike de 1998", imagen="images/motoiron.jpg",servicio="Suspension y Direccion",detalle_servicio="arreglo", categoria=Categoria.objects.get(idCategoria=3))
     Vehiculo.objects.create(patente="UVAM20", marca='Silver Plus', modelo="Silver de 2000", imagen="images/silver.jpg",servicio="Suspension y Direccion",detalle_servicio="arreglo", categoria=Categoria.objects.get(idCategoria=3))
     return redirect(vehiculo, action='ins', id = '-1')
+def index(request):
+    return render (request, "core/index.html")
+def contacto(request):
+    return render(request, "core/contacto.html")
+def nosotros(request):
+    return render(request, "core/nosotros.html")
