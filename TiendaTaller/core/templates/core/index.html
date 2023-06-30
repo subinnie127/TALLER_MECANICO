@@ -1,245 +1,33 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class=" container-fluid">
-    <div class="row ">
-    <div class="col">
-        <div class="accordion" id="accordionPanelsStayOpenExample" >
-            <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                    <strong>EVIDENCIA #1</strong>
-                </button>
-            </h2>
-            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                <div class="accordion-body">
-                <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <div class="col">
-                    <div class="card h-100">
-                        <img src="{% static 'core/img/meca.jpg'%}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                        <h5 class="card-title">El Mecanico "Juan Perez"</h5>
-                        <p class="no_mostrar">Técnico superior en automoción, especializado en mantenimiento de motores y con más de 4 años de experiencia en talleres mecánicos. Habiendo participado en el mantenimiento y reparación de más de 300 coches y motocicletas.</p>
-                        <button type="button" class="btn btn-info">Mostrar descripción </button>
-                    </div>
-                    </div>
-                    </div>
-                    <div class="col">
-                    <div class="card h-100">
-                        <img src="{% static 'core/img/herra.jpg'%}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                        <h5 class="card-title">Listado de Materiales Utilizados: </h5>
-                        <small>
-                        <ul class="no_mostrar">
-                            <li>Un gato elevador.</li>
-                            <li>Cuñas para ruedas.</li>
-                            <li>Soportes para cargar el vehículo.</li>
-                            <li>Una bomba de succión.</li>
-                            <li>Un recipiente de recogida.</li>
-                            <li>Un depósito de expansión nuevo.</li>
-                            <li>Aceite hidráulico fresco y apropiado.</li>
-                            <li>Un ayudante, siempre que sea posible.</li>
-                        </ul>
-                        <button type="button" class="btn btn-info">Mostrar descripción </button>
-                    </small>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col">
-                    <div class="card h-100">
-                        <img src="{% static 'core/img/caja.jpg'%}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                        <h5 class="card-title">Diagnostico <cite>"Mantenimiento caja de cambios"</cite></h5>
-                        <p class="no_mostrar"> Comprobacion periódica del nivel de aceite así como con la cantidad de líquido hidráulico (ATF), ya que de éstos depende mantener una óptima lubricación del sistema y suavizar el desgaste de los componentes.
-                            Recordar que el calor, la fricción y la presión interna van deteriorando este tipo de fluidos y obstruyendo el filtro interno.<cite> "Se aconseja siempre comprobar el kilometraje y tiempo aconsejados por el fabricante para sustituirlos.</cite></p>
-                        <button type="button" class="btn btn-info">Mostrar descripción </button>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col">
-                    <div class="card h-100">
-                        <img src="{% static 'core/img/evi.jpg'%}" class="card-img-top" alt="...">
-                    </div>
-                    </div>
-                    <div class="col">
-                    <div class="card h-100">
-                        <img src="{% static 'core/img/calen.jpg'%}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title text-center"><cite><strong>Fecha de ingreso del vehiculo</strong></cite> </h5>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                        <img src="{% static 'core/img/aceite.jpg'%}" class="card-img-top" alt="...">
-                        </div>
-                    </div>
-                    
+<!-- CARRUSEL -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
-                
-                </div>
-            </div>
-            </div>
-            <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                    <strong>EVIDENCIA #2</strong>
-                </button>
-            </h2>
-            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                    <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <div class="col">
-                    <div class="card h-100">
-                        <img src="{% static 'core/img/suspen.jpg'%}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                        <h5 class="card-title">Diagnostico<cite>"Correcccion del Sistema de direccion y suspencion en el sector derecho."</cite></h5>
-                        <small  class="no_mostrar">
-                        <p>Revision rutinaria y reparación de la supencion derecha de el automovil que conecta el vehículo a sus rueda. Se responsabiliza de dos funciones principales.</p>
-                        <ul>
-                            <li>Proporcionar un viaje confortable para el conductor y sus pasajeros suavizando los baches y otras imperfecciones de la carretera.</li>
-                            <li>Mantener las ruedas sobre el suelo tanto como sea posible para proporcionar tracción.</li>
-                        </ul>
-                        <cite>"Sin un sistema de suspensión, las ruedas de un coche harían contacto la superficie de la carretera dañando ambas partes."</cite>
-                        </small>
-                    <button type="button" class="btn btn-info">Mostrar descripción </button>
-                    </div>
-                    </div>
-                    </div>
-                    <div class="col">
-                    <div class="card h-100">
-                        <img src="{% static 'core/img/herra2.jpg'%}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                        <h5 class="card-title">Listado de Materiales Utilizados:</h5>
-                        <small class="no_mostrar">
-                            <ul>
-                                <li>Juego de llaves punta corona.</li>
-                                <li>Herramientas de dirección de suspensión.</li>
-                                <li>Equipo de extracción hidráulico de taller.</li>
-                                <li>Extractor de centro universal.</li>
-                                <li>Extractor de rótulas.</li>
-                                <li>Separador de rótulas.</li>
-                                <li>Compresores de muelle helicoidal.</li>
-                                <li>Un ayudante, siempre que sea posible.</li>
-                            </ul>
-                        </small>
-                        <button type="button" class="btn btn-info">Mostrar descripción </button>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col">
-                    <div class="card h-100">
-                        <img src="{% static 'core/img/info_me.jpg'%}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                        <h5 class="card-title">El Mecanico "Alfred Peniwors"</h5>
-                        <p  class="no_mostrar">Mecánico con experiencia de cinco años. He trabajado en talleres mecánicos particulares y diferentes estaciones de servicio automotriz. Cuento con excelentes habilidades para identificar y solucionar averías en cualquier vehículo. Poseo una buena forma física y estoy acostumbrado a trabajar bajo presión. Conocimientos de inglés básico.</p>
-                        <button type="button" class="btn btn-info">Mostrar descripción </button>
-                    </div>
-                    </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="{% static 'core/img/revi.jpg'%}" class="card-img-top" alt="...">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="{% static 'core/img/calen3.jpg'%}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title text-center"><cite><strong>Fecha de ingreso del vehiculo</strong></cite> </h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                    <div class="card h-100">
-                        <img src="{% static 'core/img/revi2.jpg'%}" class="card-img-top" alt="...">
-                    </div>
+                <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="pag_caja.html"></a><img src="{% static 'core/img/cajas-cambio.jpg'%}"class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>Mantenimiento de la caja de cambio</h5>
                     </div>
                 </div>
+                <div class="carousel-item">
+                    <a href="pag_suspe.html"></a><img src="{% static 'core/img/suspension-direccion.jpg'%}" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>Revisión de suspensiones</h5>
+                    </div>
                 </div>
-            </div>
-            </div>
-            <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                    <strong>EVIDENCIA #3</strong>
-                </button>
-            </h2>
-            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <div class="col">
-                    <div class="card h-100">
-                        <img src="{% static 'core/img/ele.jpg'%}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                        <h5 class="card-title">Diagnostico <cite> "Los fusibles quemados"</cite></h5>
-                        <p class="no_mostrar">Circulación de la electricidad cortada en el automovil ya que los fusibles se encargan de proteger los diferentes dispositivos electrónicos que permiten que el coche funcione. Además, son los encargados de evitar sobrecargas en el sistema.
-                            <cite>"El sistema de control electrónico es muy importante ya que administra cualquier función que requiera corriente eléctrica en un vehículo."</cite>
-                        </p>
-                        <button type="button" class="btn btn-info">Mostrar descripción </button>
-                        </div>
+                <div class="carousel-item">
+                    <a href="pag_electri.html"></a><img src="{% static 'core/img/electronica-automotriz.jpg'%}" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>Control de electricidad</h5>
                     </div>
-                    </div>
-                    <div class="col">
-                    <div class="card h-100">
-                        <img src="{% static 'core/img/perelec.jpg'%}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                        <h5 class="card-title">El Mecanico "Pedro Alonso Huarte"</h5>
-                        <p class="no_mostrar">Circulación de la electricidad cortada en el automovil ya que los fusibles se encargan de proteger los diferentes dispositivos electrónicos que permiten que el coche funcione. Además, son los encargados de evitar sobrecargas en el sistema.
-                            <cite>"El sistema de control electrónico es muy importante ya que administra cualquier función que requiera corriente eléctrica en un vehículo."</cite>
-                        </p>
-                        <button type="button" class="btn btn-info">Mostrar descripción </button>
-
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col">
-                    <div class="card h-100">
-                        <img src="{% static 'core/img/cajaf.jpg'%}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                        <h5 class="card-title">Listado de Materiales Utilizados: </h5>
-                        <p class="card-text"></p>
-                        <small class="no_mostrar">
-                            <ul>
-                                <li>Multimetro.</li>
-                                <li>Juego de fusibles.</li>
-                                <li>Destornillador o pizas a eleccion.</li>
-                                <li>Un ayudante, siempre que sea posible.</li>
-                            </ul>
-                        </small>
-                        <button type="button" class="btn btn-info">Mostrar descripción </button>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col">
-                    <div class="card h-100">
-                        <img src="{% static 'core/img/elec.jpg'%}" class="card-img-top" alt="...">
-                    </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="{% static 'core/img/calen2.jpg'%}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title text-center"><cite><strong>Fecha de ingreso del vehiculo</strong></cite> </h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="{% static 'core/img/act.jpg'%}" class="card-img-top" alt="...">
-                        </div>
                 </div>
-                </div>
-            </div>
-            </div>
-            </div>
-    </div>
-    </div>
-    <div class="col-md-4 mx-auto">
-        <div class="card"> <img src="{% static 'core/img/ban.jpg'%}" alt="">
-    </div>
-    </div>
-</div>
-</div>
-
 {% endblock %}
