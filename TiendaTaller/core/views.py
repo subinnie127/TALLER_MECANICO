@@ -68,15 +68,3 @@ def contacto(request):
     return render(request, "core/contacto.html")
 def nosotros(request):
     return render(request, "core/nosotros.html")
-def contacto(request):
-    if request.method == 'POST':
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            # Procesa los datos del formulario
-            # Por ejemplo, puedes guardar los datos en la base de datos o enviar un correo electrónico
-            # ...
-            return render(request, 'success.html')  # Renderiza una página de éxito después de enviar el formulario
-    else:
-        form = ContactForm()
-    
-    return render(request, 'core/contacto.html', {'form': form})

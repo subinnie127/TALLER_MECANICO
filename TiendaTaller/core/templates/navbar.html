@@ -13,7 +13,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <!-- LINKS DE LAS PAGINAS SELECCIONABLES -->
             <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="index.html" id="navletra">Inicio</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'index' %}" id="navletra">Inicio</a>
                 <a class="nav-link" href="{% url 'vehiculo_tienda' %}" id="navletra">Trabajos Realizados</a>
                 <a class="nav-link" href="{% url 'contacto' %}" id="navletra">Contacto</a>
                 <a class="nav-link" href="{% url 'nosotros' %}" id="navletra">Sobre nosotros</a>
