@@ -1,0 +1,23 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg bg-body-tertiary p-0" id="navcolor">
+    <div class="container-fluid p-1">
+        <!-- ACA COLOCAMOS EL LOGO DE LA EMPRESA EN EL LADO IZQUIERDO DE LA BARRA DE NAVEGACION -->
+        <link rel="stylesheet" href="{% static 'core/img/home.png' %}" type="text/css">
+        <!-- NOMBRAMOS LA EMPRESA EN LA BARRA DE NAVEGACION -->
+        <a class="navbar-brand" href="#" id="navletra">Rayo Makween</a>
+        <!-- CARACTERISTICAS DE LOS BOTONES EN LA BARRA DE NAVEGACION -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" 
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <!-- LINKS DE LAS PAGINAS SELECCIONABLES -->
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="{% url 'index' %}" id="navletra">Inicio</a>
+                <a class="nav-link" href="{% url 'vehiculo_tienda' %}" id="navletra">Trabajos Realizados</a>
+                <a class="nav-link" href="{% url 'contacto' %}" id="navletra">Contacto</a>
+                <a class="nav-link" href="{% url 'nosotros' %}" id="navletra">Sobre nosotros</a>
+            </div>
+        </div>
+    </div>
+</nav>

@@ -186,3 +186,24 @@
 .mostrarC{
     display: block;
 }
+.content-container{
+    margin-top: 20px;
+}
+.navbar-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px
+}
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.main-container {
+    flex: 1;
+}
+.container-contenido{
+    flex: 1;
+}

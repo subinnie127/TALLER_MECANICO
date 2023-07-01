@@ -1,10 +1,56 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-
-
-
-
-
-a
+<form id="registrocolor" method="POST">
+    {% csrf_token %}
+    <h2>Datos de contacto</h2>
+    <div class="form-row">
+      <div class="col">
+        <label>Nombre</label>
+        <input type="text" class="form-control" name="nombre" placeholder="Taeil">
+        {% if form.nombre.errors %}
+        <div class="text-danger">
+          {{ form.nombre.errors }}
+        </div>
+        {% endif %}
+      </div>
+      <div class="col">
+        <label>Apellido</label>
+        <input type="text" class="form-control" name="apellido" placeholder="Moon">
+        {% if form.apellido.errors %}
+        <div class="text-danger">
+          {{ form.apellido.errors }}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-7">
+        <label for="inputEmail4">Email</label>
+        <input type="email" class="form-control" name="email" placeholder="MAAKEEEN@gmail.com">
+        {% if form.email.errors %}
+        <div class="text-danger">
+          {{ form.email.errors }}
+        </div>
+        {% endif %}
+      </div>
+      <div class="form-group col-mb-5">
+        <label for="numero">Celular</label>
+        <input type="tel" class="form-control" name="numero">
+        {% if form.numero.errors %}
+        <div class="text-danger">
+          {{ form.numero.errors }}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    <div class="form-group col-6" >
+        <label for="mensaje">Mensaje</label>
+        <textarea class="form-control" id="mensaje" placeholder="Detalle el servicio que necesita realizar" rows="4"></textarea>
+      </div>
+  
+    <!-- Resto del formulario -->
+  
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
 {% endblock %}
